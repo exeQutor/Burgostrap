@@ -1,6 +1,7 @@
 (function($){
 
-  // ssshhh...
-  console.log($);
+  // silence is golden.
+
+  console.log('zup world?!');
 
 })(jQuery);

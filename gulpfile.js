@@ -15,8 +15,19 @@ function sass() {
     .pipe(gulp.dest('assets/css'));
 }
 
+// function js() {
+//   return gulp.src(['assets/js/*.js', "!assets/js/*.min.js", "./node_modules/bootstrap/dist/js/bootstrap.js"])
+//     .pipe($.concat('bundle.js'))
+// 		.pipe($.uglify())
+// 		.pipe($.rename({
+// 			suffix: ".min"
+// 		}))
+// 		.pipe(gulp.dest('assets/js'));
+// }
+
 function js() {
-  return gulp.src(['assets/js/*.js', "!assets/js/*.min.js"])
+  return gulp.src(['assets/js/*.js', "!assets/js/*.min.js", "./node_modules/bootstrap/dist/js/bootstrap.js"])
+    .pipe($.concat('bundle.js'))
 		.pipe($.uglify())
 		.pipe($.rename({
 			suffix: ".min"
